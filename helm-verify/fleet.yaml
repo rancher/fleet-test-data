@@ -1,6 +1,0 @@
-helm:
-  chart: config-chart
-  values:
-    name: global.fleet.clusterLabels.management.cattle.io/cluster-display-name
-  valuesFiles:
-    - values.yaml
