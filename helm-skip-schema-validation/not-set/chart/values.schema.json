@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "annotations"
+  ],
+  "properties": {
+    "annotations": {
+      "type": "object",
+      "default": {},
+      "title": "The annotations Schema",
+      "$ref": "https://invalid.url/schema.json#/definitions/annotations"
+    }
+  }
+}
