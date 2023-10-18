@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fleet-test-configmap
+data:
+  test: "value"
+  name: {{ .Values.name }}
