@@ -22,4 +22,4 @@ helm:
     annotations:
       app: fleet
       more: data
-    replicaCount: ${ randNumeric 0 }
+    replicaCount: 1
