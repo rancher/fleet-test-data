@@ -22,4 +22,7 @@ helm:
     annotations:
       app: fleet
       more: data
-    replicaCount: ${ randNumeric 0 }
+      # to test the ability to use functions
+      randomNumber: ${ randNumeric 3 | quote }
+    # to test explicit null values
+    replicaCount: ~
