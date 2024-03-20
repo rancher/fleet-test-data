@@ -1,9 +1,10 @@
-# In this example, we are using fleet option keepResources: true/false.
+# In this example, we are using the Fleet option keepResources: true/false.
 # This option will ensure that deployed application will not be deleted
-# after deleting GitRepo.
+# after deleting a GitRepo.
 
 This example will deploy the `nginx` application with 1 replica.
-The app will be deployed into the `nginx-keep` namespace.
+The app will be deployed to all available clusters in the `nginx-keep` namespace.
+See [Target Matching](https://fleet.rancher.io/gitrepo-targets#target-matching)
 
 ```yaml
 kind: GitRepo
@@ -18,11 +19,6 @@ spec:
   targetNamespace: keep-resources
   keepResources: true
   targets:
-    - clusterSelector:
-        matchExpressions:
-          - key: provider.cattle.io
-            operator: NotIn
-            values:
-              - harvester
+    - clusterSelector: {}
 ```
 
