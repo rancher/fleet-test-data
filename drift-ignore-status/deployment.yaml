@@ -1,0 +1,28 @@
+# This deployment is meant to represent the bug at https://github.com/rancher/fleet/issues/2521
+# It includes:
+# - A spec field "paused" set to its default value
+# - A non-empty "status", despite being a subresource and not modifiable by apply
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+  paused: false
+status:
+  collisionCount: 0
