@@ -1,0 +1,17 @@
+defaultNamespace: ns-1
+namespaceLabels:
+  foo: bar
+namespaceAnnotations:
+  foo: bar
+helm:
+  releaseName: simple-chart
+  chart: config-chart
+  values:
+    name: example-value
+targetCustomizations:
+  - name: custom-target
+    clusterName: cluster-1
+    namespaceLabels:
+      this.is/a: test
+    namespaceAnnotations:
+      this.is/a: test
