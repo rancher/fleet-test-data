@@ -1,0 +1,115 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ .Values.name }}-hub-config
+  labels:
+    component: hub
+    app: benchmarks
+    release: foo
+    frameworkId: splicedb-dev1
+    dnsprefix: splicedb
+    chart: jupyterhub-0.8.2
+    heritage: Helm
+data:
+  values.yaml: "Chart:\n  Name: jupyterhub\n  Version: 0.8.2\nRelease:\n  Name: foo\n
+    \ Namespace: default\n  Service: Helm\nauth:\n  admin:\n    access: true\n  dummy:
+    {}\n  ldap:\n    dn:\n      search: {}\n      user: {}\n    user: {}\n  state:\n
+    \   enabled: true\n  type: dummy\n  whitelist: {}\ncull:\n  concurrency: 10\n
+    \ enabled: true\n  every: 600\n  maxAge: 0\n  timeout: 3600\n  users: false\ncustom:
+    {}\ndebug:\n  enabled: false\nglobal:\n  addEnvironmentToDNSNames: true\n  aws:\n
+    \   accessId: \"\"\n    accessKey: \"\"\n    buckets: []\n  azure:\n    clientId:
+    \"\"\n    clientSecret: \"\"\n    storageAccount: []\n    tenantId: \"\"\n  baseImage:\n
+    \   pullPolicy: IfNotPresent\n    pullSecrets: regcred\n    registry: docker.io\n
+    \   repository: splicemachine/sm_k8_base\n    tag: 0.0.2\n  certificateName: dev.splicemachine-dev.io\n
+    \ cloudprovider: none\n  dnsPrefix: splicedb\n  dnsProvider: none\n  dnsprefix:
+    test\n  environmentName: dev1\n  frameworkId: splicedb-dev1\n  gcp:\n    serviceAccount:
+    {}\n  haproxyPrivate: false\n  hdfs:\n    image:\n      pullPolicy: IfNotPresent\n
+    \     pullSecrets: regcred\n      registry: docker.io\n      repository: splicemachine/sm_k8_hdfs-3.0.0:0.0.18\n
+    \ image:\n    pullPolicy: IfNotPresent\n  journalnodeQuorumSize: 3\n  jscpEnabled:
+    true\n  mlflow:\n    port:\n      bobby: 2375\n      dash: 5003\n      mlflow:
+    5001\n  mlmanager:\n    password: admin\n    user: mlmanager\n  nodeSelector:\n
+    \   core: core\n    db: db\n    enabled: false\n    meta: meta\n  nodeSelectorComposed:\n
+    \   nodeSelector: {}\n  oauthProvider: auth0\n  spark:\n    image:\n      pullPolicy:
+    IfNotPresent\n      pullSecrets: regcred\n      registry: docker.io\n      repository:
+    splicemachine/sm_k8_spark-3.0.0:0.0.69\n  splice:\n    password: admin\n    user:
+    splice\n  timezoneFlag: UTC\n  tls:\n    crt: REPLACE_TLSCRT\n    enabled: false\n
+    \   key: REPLACE_TLSKEY\n  zookeeper:\n    configuration:\n      clientPort: 2181\n
+    \     leaderElectionPort: 3888\n      maximumClientConnections: 0\n      maximumSessionTimeout:
+    120000\n      serverPort: 2888\n    quorumSize: 3\nhub:\n  allowNamedServers:
+    false\n  annotations: {}\n  baseUrl: /splicejupyter/\n  concurrentSpawnLimit:
+    64\n  consecutiveFailureLimit: 5\n  db:\n    pvc:\n      accessModes:\n      -
+    ReadWriteOnce\n      annotations: {}\n      selector: {}\n      storage: 1Gi\n
+    \   type: sqlite-pvc\n  deploymentStrategy:\n    type: Recreate\n  extraConfig:\n
+    \   AuthConfig: |\n      import sys\n      sys.path.append('/srv')\n      from
+    Authentication import SpliceAuthenticator\n      c.JupyterHub.authenticator_class
+    = SpliceAuthenticator\n      c.Authenticator.enable_auth_state = True\n      c.Authenticator.admin_users
+    = {'splice'}\n    UserConfig: |\n      c.JupyterHub.active_server_limit=10\n  extraContainers:
+    []\n  extraVolumeMounts: []\n  extraVolumes: []\n  fsGid: 1000\n  image:\n    name:
+    splicemachine/sm_k8_jupyterhub\n    tag: 0.0.14\n  imagePullPolicy: IfNotPresent\n
+    \ imagePullSecret:\n    enabled: false\n  labels: {}\n  networkPolicy:\n    egress:\n
+    \   - to:\n      - ipBlock:\n          cidr: 0.0.0.0/0\n    enabled: false\n  nodeSelector:
+    {}\n  pdb:\n    enabled: true\n    maxUnavailable: 1\n    minAvailable: 1\n  resources:\n
+    \   requests:\n      cpu: 200m\n      memory: 512Mi\n  service:\n    annotations:
+    {}\n    ports: {}\n    type: ClusterIP\n  services: {}\n  uid: 1000\nscheduling:\n
+    \ corePods:\n    nodeAffinity:\n      matchNodePurpose: prefer\n  podPriority:\n
+    \   defaultPriority: 0\n    enabled: false\n    globalDefault: false\n    userPlaceholderPriority:
+    -10\n  userPlaceholder:\n    enabled: true\n    replicas: 0\n  userPods:\n    nodeAffinity:\n
+    \     matchNodePurpose: prefer\n  userScheduler:\n    enabled: false\n    image:\n
+    \     name: gcr.io/google_containers/kube-scheduler-amd64\n      tag: v1.11.2\n
+    \   logLevel: 4\n    nodeSelector: {}\n    pdb:\n      enabled: true\n      maxUnavailable:
+    1\n      minAvailable: 1\n    replicas: 1\n    resources:\n      requests:\n        cpu:
+    50m\n        memory: 256Mi\nsingleuser:\n  nodeSelector: {}\n  extraTolerations:
+    []\n  extraNodeAffinity:\n    required: []\n    preferred: []\n  extraPodAffinity:\n
+    \   required: []\n    preferred: []\n  extraPodAntiAffinity:\n    required: []\n
+    \   preferred: []\n  networkTools:\n    image:\n      name: jupyterhub/k8s-network-tools\n
+    \     tag: 0.8.2\n  cloudMetadata:\n    enabled: false\n    ip: 169.254.169.254\n
+    \ networkPolicy:\n    enabled: false\n    egress:\n      # Required egress is
+    handled by other rules so it's safe to modify this\n      - to:\n          - ipBlock:\n
+    \             cidr: 0.0.0.0/0\n              except:\n                - 169.254.169.254/32\n
+    \ events: true\n  extraAnnotations: {}\n  extraLabels:\n    hub.jupyter.org/network-access-hub:
+    'true'\n    dnsprefix: \"splicedb\"\n  extraEnv:\n    JUPYTER_NOTEBOOK_VERSION:
+    0.0.19-cloud\n    JUPYTER_SPARK_NODE_SELECTOR: db\n    SPARK_DOCKER_IMAGE: splicemachine/sm_k8_spark-3.0.0:0.0.69\n
+    \   SPARK_EXECUTOR_COUNT: \"2\"\n    SPARK_OPTS: >-\n      --deploy-mode=client\n
+    \     --master k8s://https://kubernetes.default.svc.cluster.local:443\n      --conf
+    spark.executor.instances=2\n      --conf spark.dynamicAllocation.enabled=false\n
+    \     --conf spark.kubernetes.container.image=splicemachine/sm_k8_spark-3.0.0:0.0.69\n
+    \     --conf spark.kubernetes.authenticate.driver.serviceAccountName=spark\n    JDBC_HOST:
+    foo-hregion.default.svc.cluster.local\n    SPLICE_REL_NAME: \"foo\"\n    SPLICE_NAMESPACE:
+    \"default\"\n    MLFLOW_URL:  http://foo-mlflow-0.foo-mlflow-headless.default.svc.cluster.local:5001\n
+    \   TZ: UTC\n    JUPYTER_CONFIG_DIR: /splice/beakerx/conf\n  lifecycleHooks:\n
+    \   postStart:\n      exec:\n        command:\n          - \"/bin/sh\"\n          -
+    \"-c\"\n          - |\n            \n            sed -i -e\"s|JUPYTER_HOST_VAR|$(hostname
+    -i)|g\" $SPARK_HOME/conf/spark-defaults.conf;\n            sed -i -e\"s|JUPYTER_HOST_NAME_VAR|$(hostname)|g\"
+    $SPARK_HOME/conf/spark-defaults.conf;\n            sed -i -e\"s|SPLICE_REL_NAME_VAR|$SPLICE_REL_NAME|g\"
+    $SPARK_HOME/conf/spark-defaults.conf;\n            sed -i -e\"s|SPLICE_NAMESPACE_VAR|$SPLICE_NAMESPACE|g\"
+    $SPARK_HOME/conf/spark-defaults.conf;\n            sed -i -e\"s|SPARK_DOCKER_IMAGE_VAR|$SPARK_DOCKER_IMAGE|g\"
+    $SPARK_HOME/conf/spark-defaults.conf;\n            sed -i -e\"s|SPARK_EXECUTOR_COUNT_VAR|$SPARK_EXECUTOR_COUNT|g\"
+    $SPARK_HOME/conf/spark-defaults.conf;\n            sed -i -e\"s|JUPYTER_SPARK_NODE_SELECTOR_VAR|$JUPYTER_SPARK_NODE_SELECTOR|g\"
+    $SPARK_HOME/conf/spark-defaults.conf;\n            sed -i -e\"s|TIME_ZONE_VAR|$TZ|g\"
+    $SPARK_HOME/conf/spark-defaults.conf;\n            cp /tmp/jupyter_beakerx.json
+    $JUPYTER_CONFIG_DIR/beakerx.json;\n            \n            sed -i -e\"s|JUPYTER_HOST_VAR|$(hostname
+    -i)|g\" $JUPYTER_CONFIG_DIR/beakerx.json;\n            sed -i -e\"s|JUPYTER_HOST_NAME_VAR|$(hostname)|g\"
+    $JUPYTER_CONFIG_DIR/beakerx.json;\n            sed -i -e\"s|SPLICE_REL_NAME_VAR|$SPLICE_REL_NAME|g\"
+    $JUPYTER_CONFIG_DIR/beakerx.json;\n            sed -i -e\"s|SPLICE_NAMESPACE_VAR|$SPLICE_NAMESPACE|g\"
+    $JUPYTER_CONFIG_DIR/beakerx.json;\n            sed -i -e\"s|SPARK_DOCKER_IMAGE_VAR|$SPARK_DOCKER_IMAGE|g\"
+    $JUPYTER_CONFIG_DIR/beakerx.json;\n            sed -i -e\"s|SPARK_EXECUTOR_COUNT_VAR|$SPARK_EXECUTOR_COUNT|g\"
+    $JUPYTER_CONFIG_DIR/beakerx.json;\n            sed -i -e\"s|TIME_ZONE_VAR|$TZ|g\"
+    $JUPYTER_CONFIG_DIR/beakerx.json;\n            sed -i -e\"s|JUPYTER_SPARK_NODE_SELECTOR_VAR|$JUPYTER_SPARK_NODE_SELECTOR|g\"
+    $JUPYTER_CONFIG_DIR/beakerx.json;\n            cp /tmp/hbase-config/* /etc/hbase/conf/;\n
+    \           cp /tmp/hdfs-config/* /etc/hadoop/conf/;\n            /tmp/copy_notebooks.sh;\n
+    \           /tmp/start_monitor.sh;\n            cp /tmp/notebook.json /splice/beakerx/conf/nbconfig/notebook.json;\n
+    \ initContainers: []\n  extraContainers: []\n  uid: 1000\n  fsGid: 100\n  serviceAccountName:
+    spark\n  storage:\n    type: dynamic\n    extraLabels: {}\n    extraVolumes:\n
+    \     - name: hbase-config\n        configMap:\n          name: foo-hbase-config\n
+    \     - name: hdfs-config\n        configMap:\n          name: foo-hadoop-config\n
+    \   extraVolumeMounts:\n      - name: hbase-config\n        mountPath: /tmp/hbase-config\n
+    \     - name: hdfs-config\n        mountPath: /tmp/hdfs-config\n    static:\n
+    \     pvcName:\n      subPath: '{username}'\n    capacity: 10Gi\n    homeMountPath:
+    /home/jovyan\n    dynamic:\n      storageClass:\n      pvcNameTemplate: claim-{username}{servername}\n
+    \     volumeNameTemplate: volume-{username}{servername}\n      storageAccessModes:
+    [ReadWriteOnce]\n  image:\n    name: splicemachine/sm_k8_jupyter_allspark-3.0.0:0.0.58\n
+    \   pullPolicy: IfNotPresent\n  imagePullSecret:\n    enabled: false\n    registry:\n
+    \   username:\n    email:\n    password:\n  startTimeout: 300\n  cpu:\n    limit:\n
+    \   guarantee:\n  memory:\n    limit:\n    guarantee: 1G\n  extraResource:\n    limits:
+    {}\n    guarantees: {}\n  cmd: jupyterhub-singleuser\n  defaultUrl:\n"

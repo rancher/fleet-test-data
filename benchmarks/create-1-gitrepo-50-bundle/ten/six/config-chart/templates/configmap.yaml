@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-config-{{ .Values.name }}
+data:
+  name: {{ .Values.name }}
+  value: againandagain

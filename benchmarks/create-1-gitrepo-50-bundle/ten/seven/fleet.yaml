@@ -1,0 +1,6 @@
+defaultNamespace: default
+helm:
+  chart: config-chart
+  values:
+    name: seven
+    test: value
