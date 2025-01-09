@@ -1,0 +1,47 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.name }}-istio-sidecar-injector4
+  namespace: default
+  labels:
+    app: benchmarks
+    chart: citrix-cpx-istio-sidecar-injector-1.2.3
+    release: foo
+    istio: sidecar-injector
+data:
+  config: "policy: enabled\n# If user does *NOT* want to inject sidecar on some pods
+    based on label,\n# then mention such labels in 'neverInjectSelector' entry.\n#
+    Note: This is valid only when istio's sidecar-injector image is running.\n# neverInjectSelector:\n#
+    \  - matchExpressions:\n#     - {key: citrix.com/no.sidecar, operator: Exists}\n#
+    Here, if pod has a label citrix.com/no.sidecar, then sidecar won't be injected
+    for that pod.\ntemplate: |-\n  containers:\n  - name: istio-adaptor\n    image:
+    quay.io/citrix/citrix-istio-adaptor:1.2.1\n    imagePullPolicy: IfNotPresent \n
+    \   env:\n    - name: POD_NAME\n      valueFrom:\n        fieldRef:\n          fieldPath:
+    metadata.name\n    - name: POD_NAMESPACE\n      valueFrom:\n        fieldRef:\n
+    \         fieldPath: metadata.namespace\n    - name: INSTANCE_IP\n      valueFrom:\n
+    \       fieldRef:\n          fieldPath: status.podIP\n    - name: NODE_NAME\n
+    \     valueFrom:\n        fieldRef:\n          fieldPath: spec.nodeName\n    -
+    name: APPLICATION_NAME\n      valueFrom:\n        fieldRef:\n          fieldPath:
+    metadata.labels['app']\n    - name: NS_USER\n      value: nsroot\n    - name:
+    NS_PASSWORD\n      value: nsroot\n    args:\n    - -pilot-location\n    - istio-pilot.istio-system:15011
+    # istio-pilot.istio-system:15011\n    - -proxy-type\n    - \"sidecar\"\n    -
+    -pilot-SAN\n    - spiffe://cluster.local/ns/istio-system/sa/istio-pilot-service-account\n
+    \   - -netscaler-url\n    - \"http://127.0.0.1\"\n    - -secure-connect=true\n
+    \   - -adm-ip\n    - \"\"\n    volumeMounts:\n    - mountPath: /etc/certs/\n      name:
+    istio-certs\n      readOnly: true\n    - mountPath: /etc/nslogin \n      name:
+    nslogin\n      readOnly: true\n    securityContext:\n      readOnlyRootFilesystem:
+    true\n      runAsUser: 32024 # UID of istio-adaptor container's user\n  - name:
+    cpx-proxy\n    image: quay.io/citrix/citrix-k8s-cpx-ingress:13.0-47.22\n    imagePullPolicy:
+    IfNotPresent\n    securityContext:\n      privileged: true\n    env:\n    - name:
+    \"EULA\"\n      value: \"false\"\n    - name: \"CPX_SIDECAR_MODE\"\n      value:
+    \"true\"\n    - name: \"MGMT_HTTP_PORT\"\n      value: \"10080\"\n    - name:
+    \"MGMT_HTTPS_PORT\"\n      value: \"10443\"\n    - name: \"KUBERNETES_TASK_ID\"\n
+    \     value: \"\"\n    - name: \"NS_CPX_LITE\"\n      value: 1\n    - name: \"LS_IP\"\n
+    \     value: \n    - name: \"LS_PORT\"\n      value: 27000\n    - name: \"LOGSTREAM_COLLECTOR_IP\"\n
+    \     value: \n    volumeMounts:\n    - mountPath: /cpx/conf/\n      name: cpx-conf\n
+    \ volumes:\n  - name: cpx-conf\n    emptyDir: {}\n  - name: nslogin\n    secret:\n
+    \     optional: true\n      secretName: nslogin\n  - name: istio-certs\n    secret:\n
+    \     optional: true\n      [[ if eq .Spec.ServiceAccountName \"\" -]]\n      secretName:
+    istio.default\n      [[ else -]]\n      secretName: [[ printf \"istio.%s\" .Spec.ServiceAccountName
+    ]]\n      [[ end -]]"

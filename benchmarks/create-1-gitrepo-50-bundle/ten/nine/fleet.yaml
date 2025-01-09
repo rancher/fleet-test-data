@@ -1,0 +1,5 @@
+defaultNamespace: default
+helm:
+  chart: config-chart
+  values:
+    name: nine

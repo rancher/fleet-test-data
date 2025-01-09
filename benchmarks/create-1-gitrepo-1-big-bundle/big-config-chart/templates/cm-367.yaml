@@ -1,0 +1,235 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.name }}-node-utilization-dashboard
+  labels:
+    app.kubernetes.io/name: cost-analyzer
+    helm.sh/chart: cost-analyzer-1.57.2
+    app.kubernetes.io/instance: foo
+    app.kubernetes.io/managed-by: Helm
+    app: benchmarks
+    grafana_dashboard: '1'
+data:
+  node-utilization.json: "{  \n\t\"annotations\":{  \n\t\t\"list\":[  \n\t\t\t{  \n\t\t\t\t\"builtIn\":1,\n\t\t\t\t\"datasource\":\"--
+    Grafana --\",\n\t\t\t\t\"enable\":true,\n\t\t\t\t\"hide\":true,\n\t\t\t\t\"iconColor\":\"rgba(0,
+    211, 255, 1)\",\n\t\t\t\t\"name\":\"Annotations & Alerts\",\n\t\t\t\t\"type\":\"dashboard\"\n\t\t\t}\n\t\t]\n\t},\n\t\"editable\":true,\n\t\"gnetId\":null,\n\t\"graphTooltip\":0,\n\t\"id\":6,\n\t\"iteration\":1557245882378,\n\t\"links\":[
+    \ \n\n\t],\n\t\"panels\":[  \n\t\t{  \n\t\t\t\"cacheTimeout\":null,\n\t\t\t\"colorBackground\":false,\n\t\t\t\"colorValue\":false,\n\t\t\t\"colors\":[
+    \ \n\t\t\t\t\"#299c46\",\n\t\t\t\t\"rgba(237, 129, 40, 0.89)\",\n\t\t\t\t\"#d44a3a\"\n\t\t\t],\n\t\t\t\"datasource\":null,\n\t\t\t\"format\":\"percentunit\",\n\t\t\t\"gauge\":{
+    \ \n\t\t\t\t\"maxValue\":100,\n\t\t\t\t\"minValue\":0,\n\t\t\t\t\"show\":true,\n\t\t\t\t\"thresholdLabels\":false,\n\t\t\t\t\"thresholdMarkers\":true\n\t\t\t},\n\t\t\t\"gridPos\":{
+    \ \n\t\t\t\t\"h\":7,\n\t\t\t\t\"w\":8,\n\t\t\t\t\"x\":0,\n\t\t\t\t\"y\":0\n\t\t\t},\n\t\t\t\"id\":2,\n\t\t\t\"interval\":null,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"mappingType\":1,\n\t\t\t\"mappingTypes\":[  \n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"value to text\",\n\t\t\t\t\t\"value\":1\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"range to text\",\n\t\t\t\t\t\"value\":2\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"maxDataPoints\":100,\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"nullText\":null,\n\t\t\t\"postfix\":\"\",\n\t\t\t\"postfixFontSize\":\"50%\",\n\t\t\t\"prefix\":\"\",\n\t\t\t\"prefixFontSize\":\"50%\",\n\t\t\t\"rangeMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"from\":\"null\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"to\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"sparkline\":{
+    \ \n\t\t\t\t\"fillColor\":\"rgba(31, 118, 189, 0.18)\",\n\t\t\t\t\"full\":false,\n\t\t\t\t\"lineColor\":\"rgb(31,
+    120, 193)\",\n\t\t\t\t\"show\":false\n\t\t\t},\n\t\t\t\"tableColumn\":\"\",\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"sum(irate(container_cpu_usage_seconds_total{id=\\\"/\\\",instance=\\\"$node\\\"}[10m]))\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"A\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":\"\",\n\t\t\t\"title\":\"CPU
+    Usage\",\n\t\t\t\"type\":\"singlestat\",\n\t\t\t\"valueFontSize\":\"80%\",\n\t\t\t\"valueMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"op\":\"=\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"value\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"valueName\":\"avg\"\n\t\t},\n\t\t{
+    \ \n\t\t\t\"cacheTimeout\":null,\n\t\t\t\"colorBackground\":false,\n\t\t\t\"colorValue\":false,\n\t\t\t\"colors\":[
+    \ \n\t\t\t\t\"#299c46\",\n\t\t\t\t\"rgba(237, 129, 40, 0.89)\",\n\t\t\t\t\"#d44a3a\"\n\t\t\t],\n\t\t\t\"datasource\":null,\n\t\t\t\"format\":\"percentunit\",\n\t\t\t\"gauge\":{
+    \ \n\t\t\t\t\"maxValue\":100,\n\t\t\t\t\"minValue\":0,\n\t\t\t\t\"show\":true,\n\t\t\t\t\"thresholdLabels\":false,\n\t\t\t\t\"thresholdMarkers\":true\n\t\t\t},\n\t\t\t\"gridPos\":{
+    \ \n\t\t\t\t\"h\":7,\n\t\t\t\t\"w\":8,\n\t\t\t\t\"x\":8,\n\t\t\t\t\"y\":0\n\t\t\t},\n\t\t\t\"id\":3,\n\t\t\t\"interval\":null,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"mappingType\":1,\n\t\t\t\"mappingTypes\":[  \n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"value to text\",\n\t\t\t\t\t\"value\":1\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"range to text\",\n\t\t\t\t\t\"value\":2\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"maxDataPoints\":100,\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"nullText\":null,\n\t\t\t\"postfix\":\"\",\n\t\t\t\"postfixFontSize\":\"50%\",\n\t\t\t\"prefix\":\"\",\n\t\t\t\"prefixFontSize\":\"50%\",\n\t\t\t\"rangeMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"from\":\"null\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"to\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"sparkline\":{
+    \ \n\t\t\t\t\"fillColor\":\"rgba(31, 118, 189, 0.18)\",\n\t\t\t\t\"full\":false,\n\t\t\t\t\"lineColor\":\"rgb(31,
+    120, 193)\",\n\t\t\t\t\"show\":false\n\t\t\t},\n\t\t\t\"tableColumn\":\"\",\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"SUM(container_memory_usage_bytes{namespace!=\\\"\\\",instance=\\\"$node\\\"})
+    / SUM(kube_node_status_capacity_memory_bytes{node=\\\"$node\\\"})\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"A\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":\"\",\n\t\t\t\"title\":\"Memory
+    Usage\",\n\t\t\t\"type\":\"singlestat\",\n\t\t\t\"valueFontSize\":\"80%\",\n\t\t\t\"valueMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"op\":\"=\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"value\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"valueName\":\"avg\"\n\t\t},\n\t\t{
+    \ \n\t\t\t\"cacheTimeout\":null,\n\t\t\t\"colorBackground\":false,\n\t\t\t\"colorValue\":false,\n\t\t\t\"colors\":[
+    \ \n\t\t\t\t\"#299c46\",\n\t\t\t\t\"rgba(237, 129, 40, 0.89)\",\n\t\t\t\t\"#d44a3a\"\n\t\t\t],\n\t\t\t\"datasource\":null,\n\t\t\t\"format\":\"percentunit\",\n\t\t\t\"gauge\":{
+    \ \n\t\t\t\t\"maxValue\":100,\n\t\t\t\t\"minValue\":0,\n\t\t\t\t\"show\":true,\n\t\t\t\t\"thresholdLabels\":false,\n\t\t\t\t\"thresholdMarkers\":true\n\t\t\t},\n\t\t\t\"gridPos\":{
+    \ \n\t\t\t\t\"h\":7,\n\t\t\t\t\"w\":8,\n\t\t\t\t\"x\":16,\n\t\t\t\t\"y\":0\n\t\t\t},\n\t\t\t\"id\":4,\n\t\t\t\"interval\":null,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"mappingType\":1,\n\t\t\t\"mappingTypes\":[  \n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"value to text\",\n\t\t\t\t\t\"value\":1\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"range to text\",\n\t\t\t\t\t\"value\":2\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"maxDataPoints\":100,\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"nullText\":null,\n\t\t\t\"postfix\":\"\",\n\t\t\t\"postfixFontSize\":\"50%\",\n\t\t\t\"prefix\":\"\",\n\t\t\t\"prefixFontSize\":\"50%\",\n\t\t\t\"rangeMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"from\":\"null\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"to\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"sparkline\":{
+    \ \n\t\t\t\t\"fillColor\":\"rgba(31, 118, 189, 0.18)\",\n\t\t\t\t\"full\":false,\n\t\t\t\t\"lineColor\":\"rgb(31,
+    120, 193)\",\n\t\t\t\t\"show\":false\n\t\t\t},\n\t\t\t\"tableColumn\":\"\",\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"sum(container_fs_usage_bytes{device=~\\\"^/dev/[sv]d[a-z][1-9]$\\\",id=\\\"/\\\",instance=\\\"$node\\\"})
+    /\\nsum(container_fs_limit_bytes{device=~\\\"^/dev/[sv]d[a-z][1-9]$\\\",id=\\\"/\\\",instance=\\\"$node\\\"})\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"A\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":\"\",\n\t\t\t\"title\":\"Storage
+    Usage\",\n\t\t\t\"type\":\"singlestat\",\n\t\t\t\"valueFontSize\":\"80%\",\n\t\t\t\"valueMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"op\":\"=\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"value\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"valueName\":\"avg\"\n\t\t},\n\t\t{
+    \ \n\t\t\t\"columns\":[  \n\t\t\t\t{  \n\t\t\t\t\t\"text\":\"Avg\",\n\t\t\t\t\t\"value\":\"avg\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"datasource\":\"Prometheus\",\n\t\t\t\"fontSize\":\"100%\",\n\t\t\t\"gridPos\":{
+    \ \n\t\t\t\t\"h\":8,\n\t\t\t\t\"w\":16,\n\t\t\t\t\"x\":0,\n\t\t\t\t\"y\":7\n\t\t\t},\n\t\t\t\"hideTimeOverride\":true,\n\t\t\t\"id\":21,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"pageSize\":8,\n\t\t\t\"repeat\":null,\n\t\t\t\"repeatDirection\":\"v\",\n\t\t\t\"scroll\":true,\n\t\t\t\"showHeader\":true,\n\t\t\t\"sort\":{
+    \ \n\t\t\t\t\"col\":4,\n\t\t\t\t\"desc\":true\n\t\t\t},\n\t\t\t\"styles\":[  \n\t\t\t\t{
+    \ \n\t\t\t\t\t\"alias\":\"Pod\",\n\t\t\t\t\t\"colorMode\":null,\n\t\t\t\t\t\"colors\":[
+    \ \n\t\t\t\t\t\t\"rgba(245, 54, 54, 0.9)\",\n\t\t\t\t\t\t\"rgba(50, 172, 45, 0.97)\",\n\t\t\t\t\t\t\"#c15c17\"\n\t\t\t\t\t],\n\t\t\t\t\t\"dateFormat\":\"YYYY-MM-DD
+    HH:mm:ss\",\n\t\t\t\t\t\"decimals\":2,\n\t\t\t\t\t\"link\":false,\n\t\t\t\t\t\"linkTooltip\":\"\",\n\t\t\t\t\t\"linkUrl\":\"\",\n\t\t\t\t\t\"pattern\":\"pod_name\",\n\t\t\t\t\t\"thresholds\":[
+    \ \n\t\t\t\t\t\t\"30\",\n\t\t\t\t\t\t\"80\"\n\t\t\t\t\t],\n\t\t\t\t\t\"type\":\"string\",\n\t\t\t\t\t\"unit\":\"currencyUSD\"\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"alias\":\"\",\n\t\t\t\t\t\"colorMode\":null,\n\t\t\t\t\t\"colors\":[
+    \ \n\t\t\t\t\t\t\"rgba(245, 54, 54, 0.9)\",\n\t\t\t\t\t\t\"rgba(237, 129, 40,
+    0.89)\",\n\t\t\t\t\t\t\"rgba(50, 172, 45, 0.97)\"\n\t\t\t\t\t],\n\t\t\t\t\t\"dateFormat\":\"YYYY-MM-DD
+    HH:mm:ss\",\n\t\t\t\t\t\"decimals\":2,\n\t\t\t\t\t\"mappingType\":1,\n\t\t\t\t\t\"pattern\":\"Time\",\n\t\t\t\t\t\"thresholds\":[
+    \ \n\n\t\t\t\t\t],\n\t\t\t\t\t\"type\":\"hidden\",\n\t\t\t\t\t\"unit\":\"short\"\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"alias\":\"CPU Usage\",\n\t\t\t\t\t\"colorMode\":null,\n\t\t\t\t\t\"colors\":[
+    \ \n\t\t\t\t\t\t\"rgba(245, 54, 54, 0.9)\",\n\t\t\t\t\t\t\"rgba(237, 129, 40,
+    0.89)\",\n\t\t\t\t\t\t\"rgba(50, 172, 45, 0.97)\"\n\t\t\t\t\t],\n\t\t\t\t\t\"dateFormat\":\"YYYY-MM-DD
+    HH:mm:ss\",\n\t\t\t\t\t\"decimals\":2,\n\t\t\t\t\t\"mappingType\":1,\n\t\t\t\t\t\"pattern\":\"Value
+    #C\",\n\t\t\t\t\t\"thresholds\":[  \n\n\t\t\t\t\t],\n\t\t\t\t\t\"type\":\"number\",\n\t\t\t\t\t\"unit\":\"short\"\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"alias\":\"CPU Request\",\n\t\t\t\t\t\"colorMode\":null,\n\t\t\t\t\t\"colors\":[
+    \ \n\t\t\t\t\t\t\"rgba(245, 54, 54, 0.9)\",\n\t\t\t\t\t\t\"rgba(237, 129, 40,
+    0.89)\",\n\t\t\t\t\t\t\"rgba(50, 172, 45, 0.97)\"\n\t\t\t\t\t],\n\t\t\t\t\t\"dateFormat\":\"YYYY-MM-DD
+    HH:mm:ss\",\n\t\t\t\t\t\"decimals\":2,\n\t\t\t\t\t\"mappingType\":1,\n\t\t\t\t\t\"pattern\":\"Value
+    #A\",\n\t\t\t\t\t\"thresholds\":[  \n\n\t\t\t\t\t],\n\t\t\t\t\t\"type\":\"number\",\n\t\t\t\t\t\"unit\":\"short\"\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"alias\":\"CPU Limit\",\n\t\t\t\t\t\"colorMode\":null,\n\t\t\t\t\t\"colors\":[
+    \ \n\t\t\t\t\t\t\"rgba(245, 54, 54, 0.9)\",\n\t\t\t\t\t\t\"rgba(237, 129, 40,
+    0.89)\",\n\t\t\t\t\t\t\"rgba(50, 172, 45, 0.97)\"\n\t\t\t\t\t],\n\t\t\t\t\t\"dateFormat\":\"YYYY-MM-DD
+    HH:mm:ss\",\n\t\t\t\t\t\"decimals\":2,\n\t\t\t\t\t\"mappingType\":1,\n\t\t\t\t\t\"pattern\":\"Value
+    #B\",\n\t\t\t\t\t\"thresholds\":[  \n\n\t\t\t\t\t],\n\t\t\t\t\t\"type\":\"number\",\n\t\t\t\t\t\"unit\":\"short\"\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"alias\":\"Mem Usage\",\n\t\t\t\t\t\"colorMode\":null,\n\t\t\t\t\t\"colors\":[
+    \ \n\t\t\t\t\t\t\"rgba(245, 54, 54, 0.9)\",\n\t\t\t\t\t\t\"rgba(237, 129, 40,
+    0.89)\",\n\t\t\t\t\t\t\"rgba(50, 172, 45, 0.97)\"\n\t\t\t\t\t],\n\t\t\t\t\t\"dateFormat\":\"YYYY-MM-DD
+    HH:mm:ss\",\n\t\t\t\t\t\"decimals\":2,\n\t\t\t\t\t\"mappingType\":1,\n\t\t\t\t\t\"pattern\":\"Value
+    #D\",\n\t\t\t\t\t\"thresholds\":[  \n\n\t\t\t\t\t],\n\t\t\t\t\t\"type\":\"number\",\n\t\t\t\t\t\"unit\":\"bytes\"\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"alias\":\"Mem Request\",\n\t\t\t\t\t\"colorMode\":null,\n\t\t\t\t\t\"colors\":[
+    \ \n\t\t\t\t\t\t\"rgba(245, 54, 54, 0.9)\",\n\t\t\t\t\t\t\"rgba(237, 129, 40,
+    0.89)\",\n\t\t\t\t\t\t\"rgba(50, 172, 45, 0.97)\"\n\t\t\t\t\t],\n\t\t\t\t\t\"dateFormat\":\"YYYY-MM-DD
+    HH:mm:ss\",\n\t\t\t\t\t\"decimals\":2,\n\t\t\t\t\t\"mappingType\":1,\n\t\t\t\t\t\"pattern\":\"Value
+    #E\",\n\t\t\t\t\t\"thresholds\":[  \n\n\t\t\t\t\t],\n\t\t\t\t\t\"type\":\"number\",\n\t\t\t\t\t\"unit\":\"bytes\"\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"alias\":\"Mem Limit\",\n\t\t\t\t\t\"colorMode\":null,\n\t\t\t\t\t\"colors\":[
+    \ \n\t\t\t\t\t\t\"rgba(245, 54, 54, 0.9)\",\n\t\t\t\t\t\t\"rgba(237, 129, 40,
+    0.89)\",\n\t\t\t\t\t\t\"rgba(50, 172, 45, 0.97)\"\n\t\t\t\t\t],\n\t\t\t\t\t\"dateFormat\":\"YYYY-MM-DD
+    HH:mm:ss\",\n\t\t\t\t\t\"decimals\":2,\n\t\t\t\t\t\"mappingType\":1,\n\t\t\t\t\t\"pattern\":\"Value
+    #F\",\n\t\t\t\t\t\"thresholds\":[  \n\n\t\t\t\t\t],\n\t\t\t\t\t\"type\":\"number\",\n\t\t\t\t\t\"unit\":\"bytes\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"sum(rate(container_cpu_usage_seconds_total{container_name!=\\\"\\\",container_name!=\\\"POD\\\",pod_name!=\\\"\\\",instance=\\\"$node\\\"}[24h]))
+    by (pod_name)\",\n\t\t\t\t\t\"format\":\"table\",\n\t\t\t\t\t\"instant\":true,\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"C\"\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"expr\":\"sum(label_replace(\\nsum(avg_over_time(kube_pod_container_resource_requests_cpu_cores{container!=\\\"\\\",container!=\\\"POD\\\",node=\\\"$node\\\"}[24h]))
+    by (pod), \\n\\\"pod_name\\\",\\\"$1\\\",\\\"pod\\\",\\\"(.+)\\\")\\nor up * 0\\n)
+    by (pod_name)\",\n\t\t\t\t\t\"format\":\"table\",\n\t\t\t\t\t\"instant\":true,\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"A\"\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"expr\":\"sum(avg_over_time(container_memory_usage_bytes{container_name!=\\\"\\\",container_name!=\\\"POD\\\",pod_name!=\\\"\\\",instance=\\\"$node\\\"}[24h]))
+    by (pod_name)\\n\",\n\t\t\t\t\t\"format\":\"table\",\n\t\t\t\t\t\"instant\":true,\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"D\"\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"expr\":\"sum(label_replace(label_replace(\\nsum(avg_over_time(kube_pod_container_resource_requests_memory_bytes{container!=\\\"\\\",container!=\\\"POD\\\",node=\\\"$node\\\"}[24h]))
+    by (pod),\\n\\\"container_name\\\",\\\"$1\\\",\\\"container\\\",\\\"(.+)\\\"),
+    \\\"pod_name\\\",\\\"$1\\\",\\\"pod\\\",\\\"(.+)\\\")\\nor up * 0\\n) by (pod_name)\\n\",\n\t\t\t\t\t\"format\":\"table\",\n\t\t\t\t\t\"instant\":true,\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"E\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"timeFrom\":\"1M\",\n\t\t\t\"timeShift\":null,\n\t\t\t\"title\":\"Current
+    pods\",\n\t\t\t\"transform\":\"table\",\n\t\t\t\"transparent\":false,\n\t\t\t\"type\":\"table\"\n\t\t},\n\t\t{
+    \ \n\t\t\t\"cacheTimeout\":null,\n\t\t\t\"colorBackground\":false,\n\t\t\t\"colorValue\":false,\n\t\t\t\"colors\":[
+    \ \n\t\t\t\t\"#299c46\",\n\t\t\t\t\"rgba(237, 129, 40, 0.89)\",\n\t\t\t\t\"#d44a3a\"\n\t\t\t],\n\t\t\t\"datasource\":null,\n\t\t\t\"decimals\":0,\n\t\t\t\"format\":\"none\",\n\t\t\t\"gauge\":{
+    \ \n\t\t\t\t\"maxValue\":100,\n\t\t\t\t\"minValue\":0,\n\t\t\t\t\"show\":false,\n\t\t\t\t\"thresholdLabels\":false,\n\t\t\t\t\"thresholdMarkers\":true\n\t\t\t},\n\t\t\t\"gridPos\":{
+    \ \n\t\t\t\t\"h\":4,\n\t\t\t\t\"w\":4,\n\t\t\t\t\"x\":16,\n\t\t\t\t\"y\":7\n\t\t\t},\n\t\t\t\"id\":8,\n\t\t\t\"interval\":null,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"mappingType\":1,\n\t\t\t\"mappingTypes\":[  \n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"value to text\",\n\t\t\t\t\t\"value\":1\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"range to text\",\n\t\t\t\t\t\"value\":2\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"maxDataPoints\":100,\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"nullText\":null,\n\t\t\t\"postfix\":\"\",\n\t\t\t\"postfixFontSize\":\"50%\",\n\t\t\t\"prefix\":\"\",\n\t\t\t\"prefixFontSize\":\"50%\",\n\t\t\t\"rangeMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"from\":\"null\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"to\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"sparkline\":{
+    \ \n\t\t\t\t\"fillColor\":\"rgba(31, 118, 189, 0.18)\",\n\t\t\t\t\"full\":false,\n\t\t\t\t\"lineColor\":\"rgb(31,
+    120, 193)\",\n\t\t\t\t\"show\":false\n\t\t\t},\n\t\t\t\"tableColumn\":\"\",\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"sum(\\n count(avg_over_time(kube_pod_container_resource_requests_cpu_cores{container!=\\\"\\\",container!=\\\"POD\\\",node=\\\"$node\\\"}[24h]))
+    by (pod)\\n * on (pod) group_right()\\n sum(kube_pod_container_status_running)
+    by (pod)\\n)\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"instant\":true,\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"A\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":\"\",\n\t\t\t\"title\":\"Pods
+    Running\",\n\t\t\t\"type\":\"singlestat\",\n\t\t\t\"valueFontSize\":\"80%\",\n\t\t\t\"valueMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"op\":\"=\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"value\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"valueName\":\"current\"\n\t\t},\n\t\t{
+    \ \n\t\t\t\"cacheTimeout\":null,\n\t\t\t\"colorBackground\":false,\n\t\t\t\"colorValue\":false,\n\t\t\t\"colors\":[
+    \ \n\t\t\t\t\"#299c46\",\n\t\t\t\t\"rgba(237, 129, 40, 0.89)\",\n\t\t\t\t\"#d44a3a\"\n\t\t\t],\n\t\t\t\"datasource\":null,\n\t\t\t\"format\":\"bytes\",\n\t\t\t\"gauge\":{
+    \ \n\t\t\t\t\"maxValue\":100,\n\t\t\t\t\"minValue\":0,\n\t\t\t\t\"show\":false,\n\t\t\t\t\"thresholdLabels\":false,\n\t\t\t\t\"thresholdMarkers\":true\n\t\t\t},\n\t\t\t\"gridPos\":{
+    \ \n\t\t\t\t\"h\":4,\n\t\t\t\t\"w\":4,\n\t\t\t\t\"x\":20,\n\t\t\t\t\"y\":7\n\t\t\t},\n\t\t\t\"id\":18,\n\t\t\t\"interval\":null,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"mappingType\":1,\n\t\t\t\"mappingTypes\":[  \n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"value to text\",\n\t\t\t\t\t\"value\":1\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"range to text\",\n\t\t\t\t\t\"value\":2\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"maxDataPoints\":100,\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"nullText\":null,\n\t\t\t\"postfix\":\"\",\n\t\t\t\"postfixFontSize\":\"50%\",\n\t\t\t\"prefix\":\"\",\n\t\t\t\"prefixFontSize\":\"50%\",\n\t\t\t\"rangeMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"from\":\"null\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"to\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"sparkline\":{
+    \ \n\t\t\t\t\"fillColor\":\"rgba(31, 118, 189, 0.18)\",\n\t\t\t\t\"full\":false,\n\t\t\t\t\"lineColor\":\"rgb(31,
+    120, 193)\",\n\t\t\t\t\"show\":false\n\t\t\t},\n\t\t\t\"tableColumn\":\"\",\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"sum(container_fs_limit_bytes{device=~\\\"^/dev/[sv]d[a-z][1-9]$\\\",id=\\\"/\\\",instance=\\\"$node\\\"})\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"A\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":\"\",\n\t\t\t\"title\":\"Storage
+    Capacity\",\n\t\t\t\"type\":\"singlestat\",\n\t\t\t\"valueFontSize\":\"80%\",\n\t\t\t\"valueMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"op\":\"=\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"value\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"valueName\":\"current\"\n\t\t},\n\t\t{
+    \ \n\t\t\t\"cacheTimeout\":null,\n\t\t\t\"colorBackground\":false,\n\t\t\t\"colorValue\":false,\n\t\t\t\"colors\":[
+    \ \n\t\t\t\t\"#299c46\",\n\t\t\t\t\"rgba(237, 129, 40, 0.89)\",\n\t\t\t\t\"#d44a3a\"\n\t\t\t],\n\t\t\t\"datasource\":null,\n\t\t\t\"format\":\"none\",\n\t\t\t\"gauge\":{
+    \ \n\t\t\t\t\"maxValue\":100,\n\t\t\t\t\"minValue\":0,\n\t\t\t\t\"show\":false,\n\t\t\t\t\"thresholdLabels\":false,\n\t\t\t\t\"thresholdMarkers\":true\n\t\t\t},\n\t\t\t\"gridPos\":{
+    \ \n\t\t\t\t\"h\":4,\n\t\t\t\t\"w\":4,\n\t\t\t\t\"x\":16,\n\t\t\t\t\"y\":11\n\t\t\t},\n\t\t\t\"id\":9,\n\t\t\t\"interval\":null,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"mappingType\":1,\n\t\t\t\"mappingTypes\":[  \n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"value to text\",\n\t\t\t\t\t\"value\":1\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"range to text\",\n\t\t\t\t\t\"value\":2\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"maxDataPoints\":100,\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"nullText\":null,\n\t\t\t\"postfix\":\"\",\n\t\t\t\"postfixFontSize\":\"50%\",\n\t\t\t\"prefix\":\"\",\n\t\t\t\"prefixFontSize\":\"50%\",\n\t\t\t\"rangeMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"from\":\"null\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"to\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"sparkline\":{
+    \ \n\t\t\t\t\"fillColor\":\"rgba(31, 118, 189, 0.18)\",\n\t\t\t\t\"full\":false,\n\t\t\t\t\"lineColor\":\"rgb(31,
+    120, 193)\",\n\t\t\t\t\"show\":false\n\t\t\t},\n\t\t\t\"tableColumn\":\"\",\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"kube_node_status_capacity_cpu_cores{node=\\\"$node\\\"}\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"A\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":\"\",\n\t\t\t\"title\":\"CPU
+    Capacity\",\n\t\t\t\"type\":\"singlestat\",\n\t\t\t\"valueFontSize\":\"80%\",\n\t\t\t\"valueMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"op\":\"=\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"value\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"valueName\":\"avg\"\n\t\t},\n\t\t{
+    \ \n\t\t\t\"cacheTimeout\":null,\n\t\t\t\"colorBackground\":false,\n\t\t\t\"colorValue\":false,\n\t\t\t\"colors\":[
+    \ \n\t\t\t\t\"#299c46\",\n\t\t\t\t\"rgba(237, 129, 40, 0.89)\",\n\t\t\t\t\"#d44a3a\"\n\t\t\t],\n\t\t\t\"datasource\":null,\n\t\t\t\"format\":\"bytes\",\n\t\t\t\"gauge\":{
+    \ \n\t\t\t\t\"maxValue\":100,\n\t\t\t\t\"minValue\":0,\n\t\t\t\t\"show\":false,\n\t\t\t\t\"thresholdLabels\":false,\n\t\t\t\t\"thresholdMarkers\":true\n\t\t\t},\n\t\t\t\"gridPos\":{
+    \ \n\t\t\t\t\"h\":4,\n\t\t\t\t\"w\":4,\n\t\t\t\t\"x\":20,\n\t\t\t\t\"y\":11\n\t\t\t},\n\t\t\t\"id\":19,\n\t\t\t\"interval\":null,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"mappingType\":1,\n\t\t\t\"mappingTypes\":[  \n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"value to text\",\n\t\t\t\t\t\"value\":1\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"name\":\"range to text\",\n\t\t\t\t\t\"value\":2\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"maxDataPoints\":100,\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"nullText\":null,\n\t\t\t\"postfix\":\"\",\n\t\t\t\"postfixFontSize\":\"50%\",\n\t\t\t\"prefix\":\"\",\n\t\t\t\"prefixFontSize\":\"50%\",\n\t\t\t\"rangeMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"from\":\"null\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"to\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"sparkline\":{
+    \ \n\t\t\t\t\"fillColor\":\"rgba(31, 118, 189, 0.18)\",\n\t\t\t\t\"full\":false,\n\t\t\t\t\"lineColor\":\"rgb(31,
+    120, 193)\",\n\t\t\t\t\"show\":false\n\t\t\t},\n\t\t\t\"tableColumn\":\"\",\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"kube_node_status_capacity_memory_bytes{node=\\\"$node\\\"}\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"refId\":\"A\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":\"\",\n\t\t\t\"title\":\"RAM
+    Capacity\",\n\t\t\t\"type\":\"singlestat\",\n\t\t\t\"valueFontSize\":\"80%\",\n\t\t\t\"valueMaps\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"op\":\"=\",\n\t\t\t\t\t\"text\":\"N/A\",\n\t\t\t\t\t\"value\":\"null\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"valueName\":\"current\"\n\t\t},\n\t\t{
+    \ \n\t\t\t\"aliasColors\":{  \n\n\t\t\t},\n\t\t\t\"bars\":false,\n\t\t\t\"dashLength\":10,\n\t\t\t\"dashes\":false,\n\t\t\t\"datasource\":\"Prometheus\",\n\t\t\t\"decimals\":3,\n\t\t\t\"description\":\"This
+    panel shows historical utilization for the node.\",\n\t\t\t\"editable\":true,\n\t\t\t\"error\":false,\n\t\t\t\"fill\":0,\n\t\t\t\"grid\":{
+    \ \n\n\t\t\t},\n\t\t\t\"gridPos\":{  \n\t\t\t\t\"h\":6,\n\t\t\t\t\"w\":12,\n\t\t\t\t\"x\":0,\n\t\t\t\t\"y\":15\n\t\t\t},\n\t\t\t\"height\":\"\",\n\t\t\t\"id\":11,\n\t\t\t\"isNew\":true,\n\t\t\t\"legend\":{
+    \ \n\t\t\t\t\"alignAsTable\":false,\n\t\t\t\t\"avg\":false,\n\t\t\t\t\"current\":false,\n\t\t\t\t\"hideEmpty\":false,\n\t\t\t\t\"hideZero\":false,\n\t\t\t\t\"max\":false,\n\t\t\t\t\"min\":false,\n\t\t\t\t\"rightSide\":false,\n\t\t\t\t\"show\":false,\n\t\t\t\t\"sideWidth\":null,\n\t\t\t\t\"sort\":\"current\",\n\t\t\t\t\"sortDesc\":true,\n\t\t\t\t\"total\":false,\n\t\t\t\t\"values\":true\n\t\t\t},\n\t\t\t\"lines\":true,\n\t\t\t\"linewidth\":2,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"percentage\":false,\n\t\t\t\"pointradius\":5,\n\t\t\t\"points\":false,\n\t\t\t\"renderer\":\"flot\",\n\t\t\t\"seriesOverrides\":[
+    \ \n\n\t\t\t],\n\t\t\t\"spaceLength\":10,\n\t\t\t\"stack\":false,\n\t\t\t\"steppedLine\":true,\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"sum(irate(container_cpu_usage_seconds_total{id=\\\"/\\\",instance=\\\"$node\\\"}[10m]))\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"hide\":false,\n\t\t\t\t\t\"instant\":false,\n\t\t\t\t\t\"interval\":\"10s\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"legendFormat\":\"cpu
+    utilization\",\n\t\t\t\t\t\"metric\":\"container_cpu\",\n\t\t\t\t\t\"refId\":\"A\",\n\t\t\t\t\t\"step\":10\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":[
+    \ \n\n\t\t\t],\n\t\t\t\"timeFrom\":\"\",\n\t\t\t\"timeShift\":null,\n\t\t\t\"title\":\"CPU
+    Utilization\",\n\t\t\t\"tooltip\":{  \n\t\t\t\t\"msResolution\":true,\n\t\t\t\t\"shared\":true,\n\t\t\t\t\"sort\":2,\n\t\t\t\t\"value_type\":\"cumulative\"\n\t\t\t},\n\t\t\t\"type\":\"graph\",\n\t\t\t\"xaxis\":{
+    \ \n\t\t\t\t\"buckets\":null,\n\t\t\t\t\"mode\":\"time\",\n\t\t\t\t\"name\":null,\n\t\t\t\t\"show\":true,\n\t\t\t\t\"values\":[
+    \ \n\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"yaxes\":[  \n\t\t\t\t{  \n\t\t\t\t\t\"decimals\":null,\n\t\t\t\t\t\"format\":\"percentunit\",\n\t\t\t\t\t\"label\":\"\",\n\t\t\t\t\t\"logBase\":1,\n\t\t\t\t\t\"max\":\"1.1\",\n\t\t\t\t\t\"min\":\"0\",\n\t\t\t\t\t\"show\":true\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"format\":\"short\",\n\t\t\t\t\t\"label\":null,\n\t\t\t\t\t\"logBase\":1,\n\t\t\t\t\t\"max\":null,\n\t\t\t\t\t\"min\":null,\n\t\t\t\t\t\"show\":false\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"yaxis\":{
+    \ \n\t\t\t\t\"align\":false,\n\t\t\t\t\"alignLevel\":null\n\t\t\t}\n\t\t},\n\t\t{
+    \ \n\t\t\t\"aliasColors\":{  \n\n\t\t\t},\n\t\t\t\"bars\":false,\n\t\t\t\"dashLength\":10,\n\t\t\t\"dashes\":false,\n\t\t\t\"datasource\":\"Prometheus\",\n\t\t\t\"decimals\":2,\n\t\t\t\"description\":\"This
+    panel shows historical utilization for the node.\",\n\t\t\t\"editable\":true,\n\t\t\t\"error\":false,\n\t\t\t\"fill\":0,\n\t\t\t\"grid\":{
+    \ \n\n\t\t\t},\n\t\t\t\"gridPos\":{  \n\t\t\t\t\"h\":6,\n\t\t\t\t\"w\":12,\n\t\t\t\t\"x\":12,\n\t\t\t\t\"y\":15\n\t\t\t},\n\t\t\t\"id\":13,\n\t\t\t\"isNew\":true,\n\t\t\t\"legend\":{
+    \ \n\t\t\t\t\"alignAsTable\":false,\n\t\t\t\t\"avg\":false,\n\t\t\t\t\"current\":false,\n\t\t\t\t\"max\":false,\n\t\t\t\t\"min\":false,\n\t\t\t\t\"rightSide\":false,\n\t\t\t\t\"show\":false,\n\t\t\t\t\"sideWidth\":200,\n\t\t\t\t\"sort\":\"current\",\n\t\t\t\t\"sortDesc\":true,\n\t\t\t\t\"total\":false,\n\t\t\t\t\"values\":true\n\t\t\t},\n\t\t\t\"lines\":true,\n\t\t\t\"linewidth\":2,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"percentage\":false,\n\t\t\t\"pointradius\":5,\n\t\t\t\"points\":false,\n\t\t\t\"renderer\":\"flot\",\n\t\t\t\"seriesOverrides\":[
+    \ \n\n\t\t\t],\n\t\t\t\"spaceLength\":10,\n\t\t\t\"stack\":false,\n\t\t\t\"steppedLine\":true,\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"SUM(container_memory_usage_bytes{namespace!=\\\"\\\",instance=\\\"$node\\\"})
+    / SUM(kube_node_status_capacity_memory_bytes{node=\\\"$node\\\"})\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"instant\":false,\n\t\t\t\t\t\"interval\":\"10s\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"legendFormat\":\"ram
+    utilization\",\n\t\t\t\t\t\"metric\":\"container_memory_usage:sort_desc\",\n\t\t\t\t\t\"refId\":\"A\",\n\t\t\t\t\t\"step\":10\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":[
+    \ \n\n\t\t\t],\n\t\t\t\"timeFrom\":\"\",\n\t\t\t\"timeShift\":null,\n\t\t\t\"title\":\"RAM
+    Utilization\",\n\t\t\t\"tooltip\":{  \n\t\t\t\t\"msResolution\":false,\n\t\t\t\t\"shared\":true,\n\t\t\t\t\"sort\":2,\n\t\t\t\t\"value_type\":\"cumulative\"\n\t\t\t},\n\t\t\t\"type\":\"graph\",\n\t\t\t\"xaxis\":{
+    \ \n\t\t\t\t\"buckets\":null,\n\t\t\t\t\"mode\":\"time\",\n\t\t\t\t\"name\":null,\n\t\t\t\t\"show\":true,\n\t\t\t\t\"values\":[
+    \ \n\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"yaxes\":[  \n\t\t\t\t{  \n\t\t\t\t\t\"decimals\":null,\n\t\t\t\t\t\"format\":\"percentunit\",\n\t\t\t\t\t\"label\":null,\n\t\t\t\t\t\"logBase\":1,\n\t\t\t\t\t\"max\":\"1.1\",\n\t\t\t\t\t\"min\":\"0\",\n\t\t\t\t\t\"show\":true\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"format\":\"short\",\n\t\t\t\t\t\"label\":null,\n\t\t\t\t\t\"logBase\":1,\n\t\t\t\t\t\"max\":null,\n\t\t\t\t\t\"min\":null,\n\t\t\t\t\t\"show\":false\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"yaxis\":{
+    \ \n\t\t\t\t\"align\":false,\n\t\t\t\t\"alignLevel\":null\n\t\t\t}\n\t\t},\n\t\t{
+    \ \n\t\t\t\"aliasColors\":{  \n\n\t\t\t},\n\t\t\t\"bars\":false,\n\t\t\t\"dashLength\":10,\n\t\t\t\"dashes\":false,\n\t\t\t\"datasource\":\"Prometheus\",\n\t\t\t\"decimals\":2,\n\t\t\t\"description\":\"Traffic
+    in and out of this namespace, as a sum of the pods within it\",\n\t\t\t\"editable\":true,\n\t\t\t\"error\":false,\n\t\t\t\"fill\":1,\n\t\t\t\"grid\":{
+    \ \n\n\t\t\t},\n\t\t\t\"gridPos\":{  \n\t\t\t\t\"h\":6,\n\t\t\t\t\"w\":12,\n\t\t\t\t\"x\":0,\n\t\t\t\t\"y\":21\n\t\t\t},\n\t\t\t\"height\":\"\",\n\t\t\t\"id\":15,\n\t\t\t\"isNew\":true,\n\t\t\t\"legend\":{
+    \ \n\t\t\t\t\"alignAsTable\":false,\n\t\t\t\t\"avg\":true,\n\t\t\t\t\"current\":true,\n\t\t\t\t\"hideEmpty\":false,\n\t\t\t\t\"hideZero\":false,\n\t\t\t\t\"max\":false,\n\t\t\t\t\"min\":false,\n\t\t\t\t\"rightSide\":false,\n\t\t\t\t\"show\":true,\n\t\t\t\t\"sideWidth\":null,\n\t\t\t\t\"sort\":\"current\",\n\t\t\t\t\"sortDesc\":true,\n\t\t\t\t\"total\":false,\n\t\t\t\t\"values\":true\n\t\t\t},\n\t\t\t\"lines\":true,\n\t\t\t\"linewidth\":2,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"percentage\":false,\n\t\t\t\"pointradius\":5,\n\t\t\t\"points\":false,\n\t\t\t\"renderer\":\"flot\",\n\t\t\t\"seriesOverrides\":[
+    \ \n\n\t\t\t],\n\t\t\t\"spaceLength\":10,\n\t\t\t\"stack\":false,\n\t\t\t\"steppedLine\":false,\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"sum (rate (container_network_receive_bytes_total{instance=\\\"$node\\\"}[10m]))\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"hide\":false,\n\t\t\t\t\t\"instant\":false,\n\t\t\t\t\t\"interval\":\"\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"legendFormat\":\"<-
+    in\",\n\t\t\t\t\t\"metric\":\"container_cpu\",\n\t\t\t\t\t\"refId\":\"A\",\n\t\t\t\t\t\"step\":10\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"expr\":\"- sum (rate (container_network_transmit_bytes_total{instance=\\\"$node\\\"}[10m]))\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"hide\":false,\n\t\t\t\t\t\"instant\":false,\n\t\t\t\t\t\"interval\":\"\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"legendFormat\":\"->
+    out\",\n\t\t\t\t\t\"refId\":\"B\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":[
+    \ \n\n\t\t\t],\n\t\t\t\"timeFrom\":\"\",\n\t\t\t\"timeShift\":null,\n\t\t\t\"title\":\"Network
+    IO\",\n\t\t\t\"tooltip\":{  \n\t\t\t\t\"msResolution\":true,\n\t\t\t\t\"shared\":true,\n\t\t\t\t\"sort\":2,\n\t\t\t\t\"value_type\":\"cumulative\"\n\t\t\t},\n\t\t\t\"type\":\"graph\",\n\t\t\t\"xaxis\":{
+    \ \n\t\t\t\t\"buckets\":null,\n\t\t\t\t\"mode\":\"time\",\n\t\t\t\t\"name\":null,\n\t\t\t\t\"show\":true,\n\t\t\t\t\"values\":[
+    \ \n\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"yaxes\":[  \n\t\t\t\t{  \n\t\t\t\t\t\"format\":\"Bps\",\n\t\t\t\t\t\"label\":\"\",\n\t\t\t\t\t\"logBase\":1,\n\t\t\t\t\t\"max\":null,\n\t\t\t\t\t\"min\":null,\n\t\t\t\t\t\"show\":true\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"format\":\"short\",\n\t\t\t\t\t\"label\":null,\n\t\t\t\t\t\"logBase\":1,\n\t\t\t\t\t\"max\":null,\n\t\t\t\t\t\"min\":null,\n\t\t\t\t\t\"show\":false\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"yaxis\":{
+    \ \n\t\t\t\t\"align\":false,\n\t\t\t\t\"alignLevel\":null\n\t\t\t}\n\t\t},\n\t\t{
+    \ \n\t\t\t\"aliasColors\":{  \n\n\t\t\t},\n\t\t\t\"bars\":false,\n\t\t\t\"dashLength\":10,\n\t\t\t\"dashes\":false,\n\t\t\t\"datasource\":\"Prometheus\",\n\t\t\t\"decimals\":2,\n\t\t\t\"description\":\"Disk
+    reads and writes for the namespace, as a sum of the pods within it\",\n\t\t\t\"editable\":true,\n\t\t\t\"error\":false,\n\t\t\t\"fill\":1,\n\t\t\t\"grid\":{
+    \ \n\n\t\t\t},\n\t\t\t\"gridPos\":{  \n\t\t\t\t\"h\":6,\n\t\t\t\t\"w\":12,\n\t\t\t\t\"x\":12,\n\t\t\t\t\"y\":21\n\t\t\t},\n\t\t\t\"height\":\"\",\n\t\t\t\"id\":17,\n\t\t\t\"isNew\":true,\n\t\t\t\"legend\":{
+    \ \n\t\t\t\t\"alignAsTable\":false,\n\t\t\t\t\"avg\":true,\n\t\t\t\t\"current\":true,\n\t\t\t\t\"hideEmpty\":false,\n\t\t\t\t\"hideZero\":false,\n\t\t\t\t\"max\":false,\n\t\t\t\t\"min\":false,\n\t\t\t\t\"rightSide\":false,\n\t\t\t\t\"show\":true,\n\t\t\t\t\"sideWidth\":null,\n\t\t\t\t\"sort\":\"current\",\n\t\t\t\t\"sortDesc\":true,\n\t\t\t\t\"total\":false,\n\t\t\t\t\"values\":true\n\t\t\t},\n\t\t\t\"lines\":true,\n\t\t\t\"linewidth\":2,\n\t\t\t\"links\":[
+    \ \n\n\t\t\t],\n\t\t\t\"nullPointMode\":\"connected\",\n\t\t\t\"percentage\":false,\n\t\t\t\"pointradius\":5,\n\t\t\t\"points\":false,\n\t\t\t\"renderer\":\"flot\",\n\t\t\t\"seriesOverrides\":[
+    \ \n\n\t\t\t],\n\t\t\t\"spaceLength\":10,\n\t\t\t\"stack\":false,\n\t\t\t\"steppedLine\":false,\n\t\t\t\"targets\":[
+    \ \n\t\t\t\t{  \n\t\t\t\t\t\"expr\":\"sum (rate (container_fs_writes_bytes_total{instance=\\\"$node\\\"}[10m]))\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"hide\":false,\n\t\t\t\t\t\"instant\":false,\n\t\t\t\t\t\"interval\":\"\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"legendFormat\":\"<-
+    write\",\n\t\t\t\t\t\"metric\":\"container_cpu\",\n\t\t\t\t\t\"refId\":\"A\",\n\t\t\t\t\t\"step\":10\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"expr\":\"- sum (rate (container_fs_reads_bytes_total{instance=\\\"$node\\\"}[10m]))\",\n\t\t\t\t\t\"format\":\"time_series\",\n\t\t\t\t\t\"hide\":false,\n\t\t\t\t\t\"instant\":false,\n\t\t\t\t\t\"interval\":\"\",\n\t\t\t\t\t\"intervalFactor\":1,\n\t\t\t\t\t\"legendFormat\":\"->
+    read\",\n\t\t\t\t\t\"refId\":\"B\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"thresholds\":[
+    \ \n\n\t\t\t],\n\t\t\t\"timeFrom\":\"\",\n\t\t\t\"timeShift\":null,\n\t\t\t\"title\":\"Disk
+    IO\",\n\t\t\t\"tooltip\":{  \n\t\t\t\t\"msResolution\":true,\n\t\t\t\t\"shared\":true,\n\t\t\t\t\"sort\":2,\n\t\t\t\t\"value_type\":\"cumulative\"\n\t\t\t},\n\t\t\t\"type\":\"graph\",\n\t\t\t\"xaxis\":{
+    \ \n\t\t\t\t\"buckets\":null,\n\t\t\t\t\"mode\":\"time\",\n\t\t\t\t\"name\":null,\n\t\t\t\t\"show\":true,\n\t\t\t\t\"values\":[
+    \ \n\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"yaxes\":[  \n\t\t\t\t{  \n\t\t\t\t\t\"format\":\"Bps\",\n\t\t\t\t\t\"label\":\"\",\n\t\t\t\t\t\"logBase\":1,\n\t\t\t\t\t\"max\":null,\n\t\t\t\t\t\"min\":null,\n\t\t\t\t\t\"show\":true\n\t\t\t\t},\n\t\t\t\t{
+    \ \n\t\t\t\t\t\"format\":\"short\",\n\t\t\t\t\t\"label\":null,\n\t\t\t\t\t\"logBase\":1,\n\t\t\t\t\t\"max\":null,\n\t\t\t\t\t\"min\":null,\n\t\t\t\t\t\"show\":false\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"yaxis\":{
+    \ \n\t\t\t\t\"align\":false,\n\t\t\t\t\"alignLevel\":null\n\t\t\t}\n\t\t}\n\t],\n\t\"schemaVersion\":16,\n\t\"style\":\"dark\",\n\t\"tags\":[
+    \ \n\t\t\"cost\",\n\t\t\"utilization\",\n\t\t\"metrics\"\n\t],\n\t\"templating\":{
+    \ \n\t\t\"list\":[  \n\t\t\t{  \n\t\t\t\t\"allValue\":null,\n\t\t\t\t\"current\":{
+    \ \n\t\t\t\t\t\"text\":\"ip-172-20-44-170.us-east-2.compute.internal\",\n\t\t\t\t\t\"value\":\"ip-172-20-44-170.us-east-2.compute.internal\"\n\t\t\t\t},\n\t\t\t\t\"datasource\":\"Prometheus\",\n\t\t\t\t\"hide\":0,\n\t\t\t\t\"includeAll\":false,\n\t\t\t\t\"label\":null,\n\t\t\t\t\"multi\":false,\n\t\t\t\t\"name\":\"node\",\n\t\t\t\t\"options\":[
+    \ \n\n\t\t\t\t],\n\t\t\t\t\"query\":\"query_result(kube_node_labels)\",\n\t\t\t\t\"refresh\":1,\n\t\t\t\t\"regex\":\"/node=\\\\\\\"(.*?)(\\\\\\\")/\",\n\t\t\t\t\"skipUrlSync\":false,\n\t\t\t\t\"sort\":0,\n\t\t\t\t\"tagValuesQuery\":\"\",\n\t\t\t\t\"tags\":[
+    \ \n\n\t\t\t\t],\n\t\t\t\t\"tagsQuery\":\"\",\n\t\t\t\t\"type\":\"query\",\n\t\t\t\t\"useTags\":false\n\t\t\t}\n\t\t]\n\t},\n\t\"time\":{
+    \ \n\t\t\"from\":\"now-6h\",\n\t\t\"to\":\"now\"\n\t},\n\t\"timepicker\":{  \n\t\t\"refresh_intervals\":[
+    \ \n\t\t\t\"5s\",\n\t\t\t\"10s\",\n\t\t\t\"30s\",\n\t\t\t\"1m\",\n\t\t\t\"5m\",\n\t\t\t\"15m\",\n\t\t\t\"30m\",\n\t\t\t\"1h\",\n\t\t\t\"2h\",\n\t\t\t\"1d\"\n\t\t],\n\t\t\"time_options\":[
+    \ \n\t\t\t\"5m\",\n\t\t\t\"15m\",\n\t\t\t\"1h\",\n\t\t\t\"6h\",\n\t\t\t\"12h\",\n\t\t\t\"24h\",\n\t\t\t\"2d\",\n\t\t\t\"7d\",\n\t\t\t\"30d\"\n\t\t]\n\t},\n\t\"timezone\":\"\",\n\t\"title\":\"Node
+    utilization metrics\",\n\t\"uid\":\"NUQW37Lmk\",\n\t\"version\":1\n}"

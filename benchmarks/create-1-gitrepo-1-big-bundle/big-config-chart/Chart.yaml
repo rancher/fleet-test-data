@@ -1,0 +1,6 @@
+apiVersion: v2
+name: big-config-chart
+description: A test chart with 1.5mb of configmaps
+type: application
+version: 0.1.0
+appVersion: "1.16.0"

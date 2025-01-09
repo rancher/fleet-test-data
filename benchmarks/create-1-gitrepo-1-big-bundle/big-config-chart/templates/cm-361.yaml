@@ -1,0 +1,45 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.name }}-nginx-conf
+  labels:
+    app.kubernetes.io/name: cost-analyzer
+    helm.sh/chart: cost-analyzer-1.57.2
+    app.kubernetes.io/instance: foo
+    app.kubernetes.io/managed-by: Helm
+    app: benchmarks
+data:
+  nginx.conf: "gzip_static  on;\n\n# Enable gzip encoding for content of the provided
+    types of 50kb and higher.\ngzip on;\ngzip_min_length 50000; \ngzip_proxied expired
+    no-cache no-store private auth;\ngzip_types \n    text/plain \n    text/css \n
+    \   text/xml \n    text/javascript \n    application/x-javascript \n    application/xml
+    \n    application/json;\n\nupstream api {\n    server foo-cost-analyzer.default:9001;\n}\n\nupstream
+    model {\n    server foo-cost-analyzer.default:9003;\n}\nupstream grafana {\n    server
+    foo-grafana.default;\n\n}\n\n\nserver {\n    server_name _;\n    root /var/www;\n
+    \   index index.html;\n    add_header Cache-Control \"max-age=300\";\n    add_header
+    Cache-Control \"must-revalidate\";\n    add_header ETag \"1.57.2\";\n    listen
+    9090;\n    location /api/ {\n        proxy_pass http://api/;\n        proxy_redirect
+    off;\n        proxy_http_version 1.1;\n        proxy_set_header Connection \"\";\n
+    \       proxy_set_header  X-Real-IP  $remote_addr;\n        proxy_set_header  X-Forwarded-For
+    $proxy_add_x_forwarded_for;\n    }\n    location /model/ {\n        proxy_connect_timeout
+    \      180;\n        proxy_send_timeout          180;\n        proxy_read_timeout
+    \         180;\n        proxy_pass http://model/;\n        proxy_redirect off;\n
+    \       proxy_http_version 1.1;\n        proxy_set_header Connection \"\";\n        proxy_set_header
+    \ X-Real-IP  $remote_addr;\n        proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;\n
+    \   }\n    \n    location ~ ^/(turndown|cluster)/ {\n        add_header 'Access-Control-Allow-Origin'
+    '*' always;\n        return 404;\n    }\n    location /saml/ {\n        proxy_connect_timeout
+    \      180;\n        proxy_send_timeout          180;\n        proxy_read_timeout
+    \         180;\n        proxy_pass http://model/saml/;\n        proxy_redirect
+    off;\n        proxy_http_version 1.1;\n        proxy_set_header Connection \"\";\n
+    \       proxy_set_header  X-Real-IP  $remote_addr;\n        proxy_set_header  X-Forwarded-For
+    $proxy_add_x_forwarded_for;\n    }\n    location /login {\n        proxy_connect_timeout
+    \      180;\n        proxy_send_timeout          180;\n        proxy_read_timeout
+    \         180;\n        proxy_pass http://model/login;\n        proxy_redirect
+    off;\n        proxy_http_version 1.1;\n        proxy_set_header Connection \"\";\n
+    \       proxy_set_header  X-Real-IP  $remote_addr;\n        proxy_set_header  X-Forwarded-For
+    $proxy_add_x_forwarded_for;\n    }\n    location /grafana/ {\n        proxy_pass
+    http://grafana/;\n        proxy_redirect off;\n        proxy_http_version 1.1;\n
+    \       proxy_set_header Connection \"\";\n        proxy_set_header  X-Real-IP
+    \ $remote_addr;\n        proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;\n
+    \   }\n\n}\n"
