@@ -1,0 +1,4 @@
+namespace: fleet-kustomize-example
+kustomize:
+  dir: ""
+
