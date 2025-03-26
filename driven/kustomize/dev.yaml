@@ -1,0 +1,4 @@
+namespace: kustomize-dev
+kustomize:
+  dir: "overlays/dev"
+

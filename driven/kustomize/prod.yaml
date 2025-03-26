@@ -1,0 +1,4 @@
+namespace: kustomize-prod
+kustomize:
+  dir: "overlays/prod"
+
