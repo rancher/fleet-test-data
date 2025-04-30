@@ -1,1 +1,2 @@
-replicas: 5
+name: test-configmap
+config: testing-configuration
