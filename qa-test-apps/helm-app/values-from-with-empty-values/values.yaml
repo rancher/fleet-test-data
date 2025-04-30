@@ -1,3 +1,2 @@
-replication: true
-replicas: 1
-serviceType: NodePort
+key: key1
+value: value1

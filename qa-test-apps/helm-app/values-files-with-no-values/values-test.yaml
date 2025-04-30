@@ -1,1 +1,2 @@
-replicas: 5
+key: test-key
+value: test-value

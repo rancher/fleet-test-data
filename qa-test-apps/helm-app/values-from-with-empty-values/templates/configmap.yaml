@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: test-configmap-valuesfiles
+  name: test-configmap-valuesfrom
 data:
   key: {{ .Values.key }}
   value: {{ .Values.value }}

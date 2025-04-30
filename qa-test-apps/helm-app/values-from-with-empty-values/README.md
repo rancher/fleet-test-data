@@ -1,7 +1,7 @@
 # Helm Example
 
-This example will deploy the `redis` application deployment with custom values using `valuesFrom` in `fleet.yaml`.
-The app will be deployed into the `fleet-helm-example` namespace.
+This example will deploy the `ConfigMap` resource with custom values using `valuesFrom` in `fleet.yaml`.
+The `ConfigMap` will be deployed into the `default` namespace.
 
 ```yaml
 kind: GitRepo

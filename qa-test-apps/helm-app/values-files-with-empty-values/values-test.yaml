@@ -1,2 +1,2 @@
-name: test-configmap
-config: testing-configuration
+key: test-key
+value: test-value
