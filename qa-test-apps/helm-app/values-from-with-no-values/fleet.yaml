@@ -1,0 +1,8 @@
+helm:
+  valuesFrom:
+    - configMapKeyRef:
+        name: test-map
+        # default to namespace of bundle
+        namespace: default
+        key: values.yaml
+

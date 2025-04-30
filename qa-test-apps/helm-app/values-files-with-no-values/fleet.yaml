@@ -1,0 +1,3 @@
+helm:
+  valuesFiles:
+    - values-test.yaml
