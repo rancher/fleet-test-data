@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: test-simple-chart-config
 data:
-  test: "value123"
+  test: "value1234"
   name: {{ .Values.name }}
