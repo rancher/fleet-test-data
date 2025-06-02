@@ -1,0 +1,6 @@
+apiVersion: v2
+name: job-delete-chart
+description: A test chart that creates a job and then deletes it
+type: application
+version: 0.1.0
+appVersion: "1.16.0"

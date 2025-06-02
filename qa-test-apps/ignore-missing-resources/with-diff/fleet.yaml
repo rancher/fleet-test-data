@@ -1,0 +1,11 @@
+helm:
+  chart: job-delete-chart
+  takeOwnership: true
+diff:
+  comparePatches:
+  - apiVersion: batch/v1
+    kind: Job
+    namespace: default
+    name: alpine-wait-job
+    operations:
+    - {"op":"ignore"}

@@ -1,0 +1,4 @@
+# diff part missing here, GitRepo will show modified state for this `fleet.yaml`
+helm:
+  chart: job-delete-chart
+  takeOwnership: true
