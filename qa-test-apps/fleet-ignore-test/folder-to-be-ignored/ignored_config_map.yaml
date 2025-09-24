@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-map-ignored
+  namespace: default
+data:
+  test: "ConfigMap to be ignored"

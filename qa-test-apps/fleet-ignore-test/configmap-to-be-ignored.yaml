@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-config-map-ignored
+  namespace: default
+data:
+  test: "This ConfigMap will be ignored, if not then check .fleetignore"
