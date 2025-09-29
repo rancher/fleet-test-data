@@ -1,7 +1,7 @@
 defaultNamespace: donotdeploy
 targetCustomizations:
   - name: test
-    doNotDeploy: false   # 'false': Resources will installed on all cluster(s).
+    doNotDeploy: false   # 'false': Resources will be installed on all cluster(s).
     clusterSelector:
       matchLabels:
         test: imported
