@@ -1,0 +1,7 @@
+defaultNamespace: donotdeploy
+targetCustomizations:
+  - name: test
+    doNotDeploy: true   # 'true': Resources will be skipped on cluster(s) having below labels.
+    clusterSelector:
+      matchLabels:
+        key_resources: deploy_true
