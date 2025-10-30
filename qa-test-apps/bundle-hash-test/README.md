@@ -1,5 +1,5 @@
 ### In this example, we are checking bundle hash mismatch.
-- Below tree structure illustrates files to be ignored and not to ignore.
+
   ```bash
   qa-test-apps/bundle-hash-test
   ├── Chart.yaml
