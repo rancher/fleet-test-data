@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-for-bundle-hash-test
+data:
+  test: \"value\"
+  name: {{ .Values.name }}
