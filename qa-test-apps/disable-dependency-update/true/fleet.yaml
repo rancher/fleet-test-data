@@ -1,0 +1,7 @@
+namespace: fleet-check-dependency
+
+helm:
+  releaseName: dependency-download
+  chart: ""
+  repo: ""
+  version: ""
