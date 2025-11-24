@@ -1,0 +1,9 @@
+apiVersion: v2
+name: guestbook-deps-simple
+description: Sample application
+version: 0.0.0
+appVersion: 0.0.0
+dependencies:
+- name: postgresql
+  version: "18.1.10"
+  repository: "https://charts.bitnami.com/bitnami"

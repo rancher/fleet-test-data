@@ -1,0 +1,7 @@
+namespace: fleet-check-no-dependency
+
+helm:
+  releaseName: no-dependency-download
+  chart: ""
+  repo: ""
+  version: ""
