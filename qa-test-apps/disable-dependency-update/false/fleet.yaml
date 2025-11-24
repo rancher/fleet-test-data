@@ -5,4 +5,3 @@ helm:
   chart: ""
   repo: ""
   version: ""
-  disableDependencyUpdate: true
