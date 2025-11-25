@@ -2,4 +2,4 @@ defaultNamespace: nginx-override
 overrideTargets:
 - clusterSelector:
     matchLabels:
-        label: override
+      env: override
