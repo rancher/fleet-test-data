@@ -1,4 +1,4 @@
-### In this example, Fleet will deploy bundle to cluster having same label from `fleet.yaml` file by overriding defined target in the `GitRepo`.
+### In this example, Fleet will deploy the bundle to clusters that match the label specified in the `fleet.yaml` file, overriding any targets defined in the `GitRepo`.
 
 This example will deploy the `nginx` application with 1 replica.
 The `nginx-override` app will be deployed to cluster(s) which matches label from `fleet.yaml` file.
