@@ -1,0 +1,5 @@
+defaultNamespace: nginx-override
+overrideTargets:
+- clusterSelector:
+    matchLabels:
+      env: override
