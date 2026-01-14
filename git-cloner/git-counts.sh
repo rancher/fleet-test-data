@@ -17,7 +17,8 @@ git init
 git remote add origin $REPO_URL
 git fetch --depth 1 origin $COMMIT_SHA
 git checkout FETCH_HEAD
-echo "ShallowSHA object count: $(git count-objects -v | grep 'count:' | awk '{print $2}')"
+# counting the number of objects present in .git/objects and packfiles : this should match
+# the the return value of the function countObjects used in the fleet gitcloner tests
 echo "ShallowSHA total objects: $(git rev-list --all --objects | wc -l)"
 echo ""
 
@@ -31,7 +32,8 @@ git init
 git remote add origin $REPO_URL
 git fetch origin $COMMIT_SHA
 git checkout FETCH_HEAD
-echo "FullSHA object count: $(git count-objects -v | grep 'count:' | awk '{print $2}')"
+# counting the number of objects present in .git/objects and packfiles : this should match
+# the the return value of the function countObjects used in the fleet gitcloner tests
 echo "FullSHA total objects: $(git rev-list --all --objects | wc -l)"
 echo ""
 
@@ -73,7 +75,8 @@ if [ $depth -gt $MAX_ITERATIONS ]; then
 fi
 
 git checkout $COMMIT_SHA 2>/dev/null || echo "Could not checkout commit"
-echo "IncrementalDeepen object count: $(git count-objects -v | grep 'count:' | awk '{print $2}')"
+# counting the number of objects present in .git/objects and packfiles : this should match
+# the the return value of the function countObjects used in the fleet gitcloner tests
 echo "IncrementalDeepen total objects: $(git rev-list --all --objects | wc -l)"
 echo "IncrementalDeepen final depth: $depth"
 echo ""
@@ -86,7 +89,8 @@ rm -rf /tmp/full-clone-test
 git clone $REPO_URL /tmp/full-clone-test
 cd /tmp/full-clone-test
 git checkout $COMMIT_SHA
-echo "FullClone object count: $(git count-objects -v | grep 'count:' | awk '{print $2}')"
+# counting the number of objects present in .git/objects and packfiles : this should match
+# the the return value of the function countObjects used in the fleet gitcloner tests
 echo "FullClone total objects: $(git rev-list --all --objects | wc -l)"
 echo ""
 
