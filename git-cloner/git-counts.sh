@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 REPO_URL="https://github.com/git-fixtures/basic"
 COMMIT_SHA="1669dce138d9b841a518c64b10914d88f5e488ea"
