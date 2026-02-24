@@ -1,0 +1,7 @@
+namespace: fleet-helm-oci-example
+helm:
+  releaseName: fleet-test-configmap
+  repo: "oci://ghcr.io/rancher/fleet-test-configmap-chart"
+  version: "0.1.0"
+  values:
+    replicas: 2
