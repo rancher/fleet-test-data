@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configName }}
+data:
+  bundleName: {{ .Values.bundleName | quote }}
+  source: {{ .Values.data.source | quote }}
+  tier: {{ .Values.data.tier | quote }}

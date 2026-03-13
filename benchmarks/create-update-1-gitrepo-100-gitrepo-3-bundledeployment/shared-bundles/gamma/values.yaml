@@ -1,0 +1,5 @@
+configName: gamma-default
+data:
+  source: values-file
+  bundle: gamma
+  tier: default

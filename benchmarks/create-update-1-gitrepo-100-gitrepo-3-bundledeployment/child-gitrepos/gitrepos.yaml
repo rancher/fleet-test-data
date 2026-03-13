@@ -1,0 +1,1700 @@
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-001
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-001
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-002
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-002
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-003
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-003
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-004
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-004
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-005
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-005
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-006
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-006
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-007
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-007
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-008
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-008
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-009
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-009
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-010
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-010
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-011
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-011
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-012
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-012
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-013
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-013
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-014
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-014
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-015
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-015
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-016
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-016
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-017
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-017
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-018
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-018
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-019
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-019
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-020
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-020
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-021
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-021
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-022
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-022
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-023
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-023
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-024
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-024
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-025
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-025
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-026
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-026
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-027
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-027
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-028
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-028
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-029
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-029
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-030
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-030
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-031
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-031
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-032
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-032
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-033
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-033
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-034
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-034
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-035
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-035
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-036
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-036
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-037
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-037
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-038
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-038
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-039
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-039
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-040
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-040
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-041
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-041
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-042
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-042
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-043
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-043
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-044
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-044
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-045
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-045
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-046
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-046
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-047
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-047
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-048
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-048
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-049
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-049
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-050
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-050
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-051
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-051
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-052
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-052
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-053
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-053
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-054
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-054
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-055
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-055
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-056
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-056
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-057
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-057
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-058
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-058
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-059
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-059
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-060
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-060
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-061
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-061
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-062
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-062
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-063
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-063
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-064
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-064
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-065
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-065
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-066
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-066
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-067
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-067
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-068
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-068
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-069
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-069
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-070
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-070
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-071
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-071
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-072
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-072
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-073
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-073
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-074
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-074
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-075
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-075
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-076
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-076
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-077
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-077
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-078
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-078
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-079
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-079
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-080
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-080
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-081
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-081
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-082
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-082
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-083
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-083
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-084
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-084
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-085
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-085
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-086
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-086
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-087
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-087
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-088
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-088
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-089
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-089
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-090
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-090
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-091
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-091
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-092
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-092
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-093
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-093
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-094
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-094
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-095
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-095
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-096
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-096
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-097
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-097
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-098
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-098
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-099
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-099
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-100
+  labels:
+    fleet.cattle.io/group: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment
+spec:
+  repo: https://github.com/rancher/fleet-test-data
+  branch: benchmarks/v0.15
+  paths:
+    - benchmarks/create-update-1-gitrepo-100-gitrepo-3-bundledeployment/shared-bundles
+  targetNamespace: bm-update-1-gitrepo-100-gitrepo-3-bundledeployment-child-100
+  targets:
+    - clusterSelector:
+        matchLabels:
+          fleet.cattle.io/benchmark-gitops-target-100x3: "true"

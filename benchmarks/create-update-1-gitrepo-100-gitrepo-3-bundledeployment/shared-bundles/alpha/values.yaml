@@ -1,0 +1,5 @@
+configName: alpha-default
+data:
+  source: values-file
+  bundle: alpha
+  tier: default

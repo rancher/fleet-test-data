@@ -1,0 +1,8 @@
+helm:
+  chart: config-chart
+  releaseName: beta-bundle
+  valuesFiles:
+    - values.yaml
+    - values-override.yaml
+  values:
+    bundleName: beta

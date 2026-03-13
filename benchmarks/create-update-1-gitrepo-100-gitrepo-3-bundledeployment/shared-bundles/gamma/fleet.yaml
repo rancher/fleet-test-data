@@ -1,0 +1,8 @@
+helm:
+  chart: config-chart
+  releaseName: gamma-bundle
+  valuesFiles:
+    - values.yaml
+    - values-override.yaml
+  values:
+    bundleName: gamma

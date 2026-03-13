@@ -1,0 +1,5 @@
+configName: chart-default
+bundleName: chart-default
+data:
+  source: chart-default
+  tier: chart

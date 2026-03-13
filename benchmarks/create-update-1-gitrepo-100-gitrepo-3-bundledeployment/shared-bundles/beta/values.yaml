@@ -1,0 +1,5 @@
+configName: beta-default
+data:
+  source: values-file
+  bundle: beta
+  tier: default

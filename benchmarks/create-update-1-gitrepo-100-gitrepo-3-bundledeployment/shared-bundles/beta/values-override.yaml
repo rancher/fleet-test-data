@@ -1,0 +1,4 @@
+configName: beta-override
+data:
+  source: values-override-file
+  tier: override
