@@ -1,3 +1,11 @@
-replication: true
-replicas: 1
-serviceType: NodePort
+  # Values are for dependency nginx
+  values:
+    nginx:
+      service:
+        type: ClusterIP
+      pdb:
+        enabled: false
+      networkPolicy:
+        enabled: false
+      ingress:
+        enabled: false
