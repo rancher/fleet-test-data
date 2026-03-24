@@ -5,6 +5,4 @@ helm:
   chart: ""
   repo: ""
   version: ""
-  valuesFiles:
-  - values.yaml
   disableDependencyUpdate: true

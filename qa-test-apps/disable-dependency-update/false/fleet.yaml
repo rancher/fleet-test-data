@@ -5,5 +5,3 @@ helm:
   chart: ""
   repo: ""
   version: ""
-  valuesFiles:
-    - values.yaml

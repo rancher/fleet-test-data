@@ -1,11 +1,10 @@
-  # Values are for dependency nginx
-  values:
-    nginx:
-      service:
-        type: ClusterIP
-      pdb:
-        enabled: false
-      networkPolicy:
-        enabled: false
-      ingress:
-        enabled: false
+# Values are for dependency nginx
+nginx:
+  service:
+    type: ClusterIP
+  pdb:
+    enabled: false
+  networkPolicy:
+    enabled: false
+  ingress:
+    enabled: false
