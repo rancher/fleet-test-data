@@ -11,23 +11,17 @@
     │   ├── fleet.yaml
     │   ├── README.md
     │   ├── templates
-    │   │   ├── frontend-deployment.yaml
-    │   │   ├── frontend-service.yaml
-    │   │   ├── redis-master-deployment.yaml
-    │   │   ├── redis-master-service.yaml
-    │   │   ├── redis-slave-deployment.yaml
-    │   │   └── redis-slave-service.yaml
+    │   │   └── configmap.yaml
     │   └── values.yaml
+    ├── README.md
     └── true
         ├── Chart.yaml
         ├── fleet.yaml
         ├── README.md
         ├── templates
-        │   ├── frontend-deployment.yaml
-        │   ├── frontend-service.yaml
-        │   ├── redis-master-deployment.yaml
-        │   ├── redis-master-service.yaml
-        │   ├── redis-slave-deployment.yaml
-        │   └── redis-slave-service.yaml
+        │   └── configmap.yaml
         └── values.yaml
     ```
+
+> [!WARNING]
+> Some Helm chart dependencies may show a `Modified` state, which is detected in Helm v4. In these examples, resources in a modified state are excluded by disabling them in the `values.yaml` file.
