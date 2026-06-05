@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-delayed-readiness
+  namespace: nginx-delayed-readiness
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-delayed-readiness
+  template:
+    metadata:
+      labels:
+        app: nginx-delayed-readiness
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 30    # Long delay to catch notReady state
+          periodSeconds: 10
+          failureThreshold: 3
+        startupProbe:                 # Optional: ensures even longer startup
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          failureThreshold: 6         # 6 attempts = 30 seconds
