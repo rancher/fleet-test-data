@@ -1,0 +1,3 @@
+defaultNamespace: app-version-2
+helm:
+  releaseName: release2
