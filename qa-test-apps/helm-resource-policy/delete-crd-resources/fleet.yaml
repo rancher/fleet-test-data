@@ -1,0 +1,5 @@
+defaultNamespace: helm-resource-policy-delete
+
+# With deleteCRDResources enabled Fleet does not add "helm.sh/resource-policy: keep"
+# to CRDs at all, so no resource in this bundle should carry the annotation.
+deleteCRDResources: true

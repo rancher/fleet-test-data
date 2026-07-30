@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: resource-policy-cm
+data:
+  # Helm renders ConfigMaps *before* CRDs, so this resource was never affected
+  # by the bug. It is here as a control.
+  note: rendered-before-the-crd
