@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  # Helm renders Services *after* CRDs, so this is the resource that used to
+  # inherit "helm.sh/resource-policy: keep". Do not remove it.
+  name: resource-policy-svc
+spec:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80

@@ -1,0 +1,4 @@
+defaultNamespace: helm-resource-policy-keep
+
+# deleteCRDResources is intentionally left unset here; it defaults to false,
+# which is the case where Fleet annotates CRDs with "helm.sh/resource-policy: keep".
