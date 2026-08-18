@@ -7,7 +7,7 @@ policy: ~
 image:
   repository: rancher/mirrored-library-busybox
   pullPolicy: IfNotPresent
-  tag: "1.34.1"
+  tag: "1.37.0"
 
 annotations:
   app: "test"
