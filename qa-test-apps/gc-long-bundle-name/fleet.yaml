@@ -1,0 +1,5 @@
+# The bundle name is 55 characters, above Helm's 53-character release-name limit, and no
+# helm.releaseName is set. Fleet therefore derives the release name by truncating the bundle
+# name to 53 characters: first 47 characters + "-" + md5(name)[:5].
+name: repro-bundle-name-that-exceeds-the-53-char-helm-limit-x
+defaultNamespace: gc-long-bundle-name
