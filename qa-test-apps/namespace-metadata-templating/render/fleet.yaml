@@ -1,0 +1,11 @@
+# ${ } templates in namespaceLabels / namespaceAnnotations are rendered per target cluster.
+defaultNamespace: ns-templated
+namespaceLabels:
+  cluster-name: "${ .ClusterName }"
+  cluster-namespace: "${ .ClusterNamespace }"
+  cluster-label-name: "${ .ClusterLabels.name }"
+namespaceAnnotations:
+  example.io/cluster: "${ .ClusterName }:p-${ .ClusterName }-myproject"
+helm:
+  releaseName: ns-templated
+  chart: config-chart

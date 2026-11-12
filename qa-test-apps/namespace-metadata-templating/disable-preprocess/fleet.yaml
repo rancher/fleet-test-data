@@ -1,0 +1,8 @@
+# disablePreProcess keeps the templates literal; the API server rejects the label value.
+defaultNamespace: ns-templated-disabled
+namespaceLabels:
+  cluster-name: "${ .ClusterName }"
+helm:
+  releaseName: ns-templated-disabled
+  chart: config-chart
+  disablePreProcess: true
