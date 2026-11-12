@@ -1,0 +1,7 @@
+# References a cluster label that does not exist; the bundle reports a namespaceLabels render error.
+defaultNamespace: ns-templated-missing
+namespaceLabels:
+  env: "${ .ClusterLabels.missing }"
+helm:
+  releaseName: ns-templated-missing
+  chart: config-chart
